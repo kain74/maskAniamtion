@@ -115,17 +115,18 @@ section article .slogan {
   transform: translateY(-60%);
   text-align: right;
   padding: 50px;
+  transform-style: preserve-3d;
   perspective: 900px;
 }
 section article .slogan::before {
   position: absolute;
-  top: 0px;
+  top: -70px;
   right: 0px;
   content: "";
   display: block;
   width: 500px;
   height: 500px;
-  border: 1px solid #fff;
+  border: 5px solid red;
   transition: all 1.5s;
 }
 section article .slogan h2 {
@@ -136,7 +137,7 @@ section article .slogan h2 {
 }
 section article .slogan h2 .inner {
   position: relative;
-  font: bold 200px/1 "Arial";
+  font: bold 160px/1 "Arial";
   color: #fff;
   transform: scaleY(1.25);
   opacity: 0;
@@ -207,7 +208,7 @@ section article.on {
 }
 section article.on .slogan::before {
   opacity: 1;
-  transform: rotateY(220deg) skewX(-5deg);
+  transform: rotateY(220deg);
 }
 section article.on .slogan h2 .inner, section article.on .slogan .p1 .inner, section article.on .slogan .p2 .inner {
   opacity: 1;
