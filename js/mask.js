@@ -1,6 +1,15 @@
 const wrap = document.querySelector('main');
 const btns = wrap.querySelectorAll('#navi li');
 const panels = wrap.querySelectorAll('section article');
+let scene1 = document.getElementById('scene1');
+let paraalax1 = new Parallax(scene1);
+let scene2= document.getElementById('scene2');
+let paraalax2 = new Parallax(scene2);
+let scene3= document.getElementById('scene3');
+let paraalax3 = new Parallax(scene3);
+let scene4 = document.getElementById('scene4');
+let paraalax4 = new Parallax(scene4);
+
 
 btns.forEach((btn, index)=>{
     btn.addEventListener('click', e =>{
@@ -27,5 +36,7 @@ btns.forEach((btn, index)=>{
         },1400)
     });
 });
+
+
 
 

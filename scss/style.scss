@@ -120,7 +120,7 @@ section{
                 display: block;
                 width: 500px;
                 height: 500px;
-                border: 30px solid skyblue;
+                border: 30px solid rgb(135, 206, 235);
                 transition: all 1.5s;
                 mix-blend-mode: exclusion;
             }
@@ -200,17 +200,29 @@ section{
         }
         &:nth-of-type(1){
             .slogan {
-                position: absolute;
-                right: 8%;
-                top: 50%;
-                transform: translateY(-60%);
-                text-align: right;
-                padding: 50px;
-                transform-style: preserve-3d;
-                perspective: 900px;
-                
                 &::before {
                     border: 30px solid rgb(235, 195, 135);
+                }
+            }
+        }
+        &:nth-of-type(2){
+            .slogan {
+                &::before {
+                    border: 30px solid rgb(135, 206, 235);
+                }
+            }
+        }
+        &:nth-of-type(3){
+            .slogan {
+                &::before {
+                    border: 30px solid rgb(219, 97, 136);
+                }
+            }
+        }
+        &:nth-of-type(4){
+            .slogan {
+                &::before {
+                    border: 30px solid rgb(148, 235, 135);
                 }
             }
         }
