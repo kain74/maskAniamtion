@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #111;
+}
+
+header {
+  width: 450px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  z-index: 4;
+}
+header h1 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font: bold 40px/1 "orbitron";
+  color: #fff;
+}
+
+#navi {
+  width: 100%;
+  position: absolute;
+  top: 180px;
+  left: 0px;
+}
+#navi li {
+  pointer-events: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 40px;
+  color: #fff;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: transform 1.4s, opacity 1.4s;
+  transform-origin: left center;
+  box-sizing: border-box;
+}
+#navi li h2 {
+  font: bold 14px/1 "orbitron";
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  opacity: 1;
+}
+#navi li h2::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  margin-top: 7px;
+  margin-bottom: 3px;
+  transition: 1.4s;
+}
+#navi li p {
+  font: 11px/1 "arial";
+  color: #fff;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+#navi li.on {
+  pointer-events: none;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  transform: scale(1.3);
+  opacity: 0.9;
+}
+#navi li.on h2::after {
+  width: 150px;
+}
+
+section {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+section article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+section article video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(180deg);
+}
+section article .slogan {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-60%);
+  text-align: right;
+  padding: 50px;
+  perspective: 900px;
+}
+section article .slogan::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: "";
+  display: block;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #fff;
+  transition: all 1.5s;
+}
+section article .slogan h2 {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+section article .slogan h2 .inner {
+  position: relative;
+  font: bold 200px/1 "Arial";
+  color: #fff;
+  transform: scaleY(1.25);
+  opacity: 0;
+  transition: opacity 0.2s 0.5s;
+}
+section article .slogan h2::after {
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 1;
+  transition: right ease-in-out 1s;
+}
+section article .slogan .p1 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-right: 14;
+}
+section article .slogan .p1 .inner {
+  font: 20px/1 "verdana";
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s 0.8s;
+}
+section article .slogan .p1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  transition: right ease-in-out 1s 0.3s;
+}
+section article .slogan .p2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-right: 14;
+}
+section article .slogan .p2 .inner {
+  font: 20px/1 "verdana";
+  color: #fff;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s 1.1s;
+}
+section article .slogan .p2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  transition: right ease-in-out 1s 0.6s;
+}
+section article.on {
+  z-index: 3;
+}
+section article.on .slogan::before {
+  opacity: 1;
+  transform: rotateY(220deg) skewX(-5deg);
+}
+section article.on .slogan h2 .inner, section article.on .slogan .p1 .inner, section article.on .slogan .p2 .inner {
+  opacity: 1;
+}
+section article.on .slogan h2::after, section article.on .slogan .p1::after, section article.on .slogan .p2::after {
+  right: 100%;
+}
+section article.lower {
+  z-index: 2;
+}
+section article:nth-of-type(1).mask {
+  -webkit-mask: url(../src/mask1.png);
+  -webkit-mask-size: 2300% 100%;
+  animation: mask-play 1.4s steps(22) forwards;
+}
+section article:nth-of-type(2).mask {
+  -webkit-mask: url(../src/mask2.png);
+  -webkit-mask-size: 3000% 100%;
+  animation: mask-play 1.4s steps(29) forwards;
+}
+section article:nth-of-type(3).mask {
+  -webkit-mask: url(../src/mask3.png);
+  -webkit-mask-size: 7100% 100%;
+  animation: mask-play 1.4s steps(70) forwards;
+}
+section article:nth-of-type(4).mask {
+  -webkit-mask: url(../src/mask4.png);
+  -webkit-mask-size: 7400% 100%;
+  animation: mask-play 1.4s steps(73) forwards;
+}
+
+@keyframes mask-play {
+  0% {
+    -webkit-mask-position: 0% 0%;
+  }
+  100% {
+    -webkit-mask-position: 100% 0%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
