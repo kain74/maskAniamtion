@@ -103,6 +103,7 @@ section article {
   z-index: 1;
 }
 section article video {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -112,11 +113,12 @@ section article .slogan {
   position: absolute;
   right: 8%;
   top: 50%;
-  transform: translateY(-60%);
+  margin-top: -250px;
   text-align: right;
   padding: 50px;
   transform-style: preserve-3d;
   perspective: 900px;
+  pointer-events: inherit !important;
 }
 section article .slogan::before {
   position: absolute;
@@ -156,10 +158,11 @@ section article .slogan h2::after {
   transition: right ease-in-out 1s;
 }
 section article .slogan .p1 {
-  display: inline-block;
+  display: inline-block !important;
   overflow: hidden;
   position: relative;
   margin-right: 14;
+  position: relative !important;
 }
 section article .slogan .p1 .inner {
   font: 20px/1 "verdana";
@@ -180,10 +183,11 @@ section article .slogan .p1::after {
   transition: right ease-in-out 1s 0.3s;
 }
 section article .slogan .p2 {
-  display: inline-block;
+  display: inline-block !important;
   overflow: hidden;
   position: relative;
   margin-right: 14;
+  position: relative !important;
 }
 section article .slogan .p2 .inner {
   font: 20px/1 "verdana";
@@ -207,13 +211,13 @@ section article:nth-of-type(1) .slogan::before {
   border: 30px solid rgb(235, 195, 135);
 }
 section article:nth-of-type(2) .slogan::before {
-  border: 30px solid rgb(135, 206, 235);
+  border: 30px solid rgb(100, 171, 56);
 }
 section article:nth-of-type(3) .slogan::before {
   border: 30px solid rgb(219, 97, 136);
 }
 section article:nth-of-type(4) .slogan::before {
-  border: 30px solid rgb(148, 235, 135);
+  border: 30px solid rgb(208, 151, 28);
 }
 section article.on {
   z-index: 3;
