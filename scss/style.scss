@@ -89,7 +89,6 @@ section{
     width: 100%;
     height: 100%;
     article{
-        display: none;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -232,7 +231,6 @@ section{
             }
         }
         &.on {
-            display: block;
             z-index: 3;
             .slogan {
                 &::before {
