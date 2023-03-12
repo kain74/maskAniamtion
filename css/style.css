@@ -95,6 +95,7 @@ section {
   height: 100%;
 }
 section article {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -220,6 +221,7 @@ section article:nth-of-type(4) .slogan::before {
   border: 30px solid rgb(208, 151, 28);
 }
 section article.on {
+  display: block;
   z-index: 3;
 }
 section article.on .slogan::before {
