@@ -28,7 +28,6 @@ btns.forEach((btn, index)=>{
         btns[index].classList.add('on');
         btns[index].ariaSelected = true;
         panels[index].classList.add('lower');
-        videos[index].play();
         setTimeout(()=>{
             for(let i=0; i<panels.length; i++){
                 if(panels[i].classList.contains('on')){
@@ -38,6 +37,7 @@ btns.forEach((btn, index)=>{
             }
             panels[index].classList.remove('lower');
             panels[index].classList.add('on');
+            videos[index].play();
         },1400)
     });
 });
