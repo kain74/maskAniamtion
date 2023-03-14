@@ -102,6 +102,19 @@ section article {
   left: 0px;
   z-index: 1;
 }
+section article.on {
+  z-index: 3;
+}
+section article.on .slogan::before {
+  opacity: 1;
+  transform: rotateY(220deg);
+}
+section article.on .slogan h2 .inner, section article.on .slogan .p1 .inner, section article.on .slogan .p2 .inner {
+  opacity: 1;
+}
+section article.on .slogan h2::after, section article.on .slogan .p1::after, section article.on .slogan .p2::after {
+  right: 100%;
+}
 section article video {
   position: relative;
   width: 100%;
@@ -241,19 +254,6 @@ section article:nth-of-type(3) .slogan::before {
 }
 section article:nth-of-type(4) .slogan::before {
   border: 30px solid rgb(208, 151, 28);
-}
-section article.on {
-  z-index: 3;
-}
-section article.on .slogan::before {
-  opacity: 1;
-  transform: rotateY(220deg);
-}
-section article.on .slogan h2 .inner, section article.on .slogan .p1 .inner, section article.on .slogan .p2 .inner {
-  opacity: 1;
-}
-section article.on .slogan h2::after, section article.on .slogan .p1::after, section article.on .slogan .p2::after {
-  right: 100%;
 }
 
 @keyframes mask-play {
