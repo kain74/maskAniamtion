@@ -1,10 +1,9 @@
+const wrap = document.querySelector('main');
+const btns = wrap.querySelectorAll('#navi li');
+const panels = wrap.querySelectorAll('section article');
+const brs = wrap.querySelectorAll('br')
+const videos = wrap.querySelectorAll('video');
 window.addEventListener('DOMContentLoaded', ()=>{
-    const wrap = document.querySelector('main');
-    const btns = wrap.querySelectorAll('#navi li');
-    const panels = wrap.querySelectorAll('section article');
-    const brs = wrap.querySelectorAll('br')
-    const videos = wrap.querySelectorAll('video');
-
     btns.forEach((btn, index)=>{
         btn.addEventListener('click', e =>{
             for(let i=0; i<btns.length; i++){
