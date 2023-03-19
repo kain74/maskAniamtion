@@ -1,4 +1,4 @@
-windlow.addEventListener('load', function(){
+window.addEventListener('load', function(){
     const wrap = document.querySelector('main');
     const btns = wrap.querySelectorAll('#navi li');
     const panels = wrap.querySelectorAll('section article');
