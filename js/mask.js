@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=>{
+window.addEventListener('DOMContentLoaded', ()=>{
     const wrap = document.querySelector('main');
     const btns = wrap.querySelectorAll('#navi li');
     const panels = wrap.querySelectorAll('section article');
